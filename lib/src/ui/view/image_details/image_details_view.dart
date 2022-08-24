@@ -1,9 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 import 'package:flutter/material.dart';
-import 'package:nasa_app/src/domain/entities/image.dart';
-
-import '../../common/common_image.dart';
+import 'package:nasa_app/src/domain/entities/image_entity.dart';
+import '../../common_widgets/common_image.dart';
 
 class ImageDetailsView extends StatelessWidget {
   final ImageEntity image;

@@ -1,4 +1,4 @@
-import 'package:nasa_app/src/domain/entities/image.dart';
+import 'package:nasa_app/src/domain/entities/image_entity.dart';
 import 'package:nasa_app/src/domain/enums/media_type_enum.dart';
 import 'package:nasa_app/src/domain/errors/nasa_exception.dart';
 

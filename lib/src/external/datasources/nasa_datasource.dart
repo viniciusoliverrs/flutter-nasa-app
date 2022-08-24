@@ -1,8 +1,8 @@
 import 'package:nasa_app/src/core/constants/api.dart';
-import 'package:nasa_app/src/core/services/http/custom_response.dart';
 import 'package:nasa_app/src/data/datasources/inasa_datasource.dart';
 
-import '../../core/services/http/ihttp_service.dart';
+import '../../domain/data/services/ihttp_service.dart';
+import '../../domain/entities/custom_response.dart';
 
 class NasaDatasource implements INasaDatasource {
   final IHttpService service;

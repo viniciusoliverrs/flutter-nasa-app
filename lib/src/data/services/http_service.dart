@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:nasa_app/src/core/services/http/http_exception.dart';
+import 'package:nasa_app/src/domain/errors/http_exception.dart';
 
-import 'custom_response.dart';
-import 'ihttp_service.dart';
+import '../../domain/entities/custom_response.dart';
+import '../../domain/data/services/ihttp_service.dart';
 
 class HttpService implements IHttpService<CustomResponse> {
   final Client http;

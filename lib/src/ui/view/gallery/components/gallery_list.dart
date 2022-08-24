@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_app/src/ui/view/gallery/components/gallery_item.dart';
 
-import '../../../../domain/entities/image.dart';
+import '../../../../domain/entities/image_entity.dart';
 
 class GalleryList extends StatelessWidget {
   final List<ImageEntity> images;

@@ -3,11 +3,11 @@ import 'package:provider/provider.dart';
 
 import '../../data/datasources/inasa_datasource.dart';
 import '../../data/repositories/nasa_repository.dart';
+import '../../data/services/http_service.dart';
 import '../../domain/data/repositories/inasa_repository.dart';
+import '../../domain/data/services/ihttp_service.dart';
 import '../../external/datasources/nasa_datasource.dart';
 import '../providers/nasa_provider.dart';
-import '../services/http/http_service.dart';
-import '../services/http/ihttp_service.dart';
 
 class AppProviders {
   static final providers = [
