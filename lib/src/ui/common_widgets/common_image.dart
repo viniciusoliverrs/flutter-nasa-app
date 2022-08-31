@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 
 class CommonImage extends StatelessWidget {
   final String imageUrl;
+  final int height;
+  final int width;
   const CommonImage({
     Key? key,
     required this.imageUrl,
+    this.height = 200,
+    this.width = 200,
   }) : super(key: key);
 
   @override
@@ -13,8 +17,8 @@ class CommonImage extends StatelessWidget {
     return Image.network(
         imageUrl,
         fit: BoxFit.cover,
-        cacheHeight: 600,
-        cacheWidth: 600,
+        cacheHeight: height,
+        cacheWidth: width,
         loadingBuilder: (context, child, loadingProgress) {
           if (loadingProgress == null) {
             return child;

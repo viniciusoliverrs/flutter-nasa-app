@@ -12,11 +12,12 @@ class ImageDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child:
-            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          Expanded(
-            child: Stack(
+      backgroundColor: Colors.black,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Stack(
               children: [
                 Align(
                   alignment: Alignment.topCenter,
@@ -28,8 +29,8 @@ class ImageDetailsView extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: Container(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(30),
@@ -44,25 +45,20 @@ class ImageDetailsView extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Column(
-              children: [
-                Text(
-                  image.explanation,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                    fontSize: 20,
+            Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  Text(
+                    image.explanation,
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(fontSize: 20, color: Colors.white),
                   ),
-                ),
-              ],
-            ),
-          )
-        ]),
+                ],
+              ),
+            )
+          ]),
+        ),
       ),
     );
   }

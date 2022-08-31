@@ -10,14 +10,17 @@ class GalleryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Consumer<NasaProvider>(
-        builder: (context, provider, child) {
-          return Column(
-            children: [
-              Expanded(child: GalleryList(images: provider.images)),
-            ],
-          );
-        },
+      body: SafeArea(
+        child: Consumer<NasaProvider>(
+          builder: (context, provider, child) {
+            if (provider.isLoading) return const LinearProgressIndicator();
+            return Column(
+              children: [
+                Expanded(child: GalleryList(images: provider.images)),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
